@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="app.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1 class="display-4 text-center">
+    Weather App
+  </h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Search by Zip Code</h5>
+          <!-- <form action="weather.html" method="get" id="zipForm"> -->
+          <form id="zipForm">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Zip</span>
+              <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="Enter Zip Code" id="zip">
+            </div>
+            <button class="btn btn-primary" id="zipSubmit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Search by City</h5>
+          <form id="cityForm">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+              <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="Enter City" id="city">
+            </div>
+            <button class="btn btn-primary" id="citySubmit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card text-center mt-3">
+    <div class="card-header">
+      3-Day Weather Forecast
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Current Weather</h5>
+      <ul id="currentWeather">
+      </ul>
+      <h5>3-Day Forecast</h5>
+      <ul id="forecast">
+      </ul>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
